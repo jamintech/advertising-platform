@@ -1,0 +1,75 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.header-container {
+  display: flex;
+}
+
+.header-container p-button {
+  margin-right: 5px;
+}
+app-header {
+  flex: 1;
+}
+
+section {
+  flex-shrink: 0; /* Ensure sections take only the height they need */
+}
+
+.site-frame {
+  // border: 5px solid orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  flex-grow: 1; /* Take the remaining height */
+  overflow: auto;
+}
+
+.iframe-wrapper {
+  flex: 1;
+  display: flex;
+  width: 100%; /* Ensure the wrapper takes full width */
+  height: 100%; /* Ensure the wrapper takes full height */
+}
+
+.siteurl {
+  font-size: 0.5em;
+  font-weight: 400;
+  text-align: left;
+  margin: 2px;
+  color: white;
+}
+
+.gravatar {
+  margin: 0px;
+  margin-left: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.membername {
+  font-size: 0.8em;
+  font-weight: 700;
+  text-align: left;
+  margin: 2px;
+  color: white;
+}
+
+.memberdata {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 5px;
+}
+
+.countdown-circle {
+    margin-left: 10px;
+    margin-right: 5px;
+}

@@ -1,0 +1,16 @@
+<div class="circle-container">
+  <svg *ngIf="countdown > 0" class="circle" viewBox="0 0 36 36">
+    <circle class="circle-bg" cx="18" cy="18" r="15.9155" />
+    <circle
+      class="circle-progress"
+      cx="18"
+      cy="18"
+      r="15.9155"
+      [attr.stroke-dasharray]="strokeDasharray"
+    />
+    <text x="17" y="18" class="number">{{ countdown }}</text>
+  </svg>
+  <div *ngIf="countdown === 0" class="square-box">
+    <span class="message">Click a Link to continue</span>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<section>
+  <div class="header-container">
+    <app-header headerText="BONUS IN {{bonusin}}"></app-header>
+    <app-header headerText="WEBSITES {{sitesVisited}}"></app-header>
+    <app-header headerText="POINTS {{pointsToday}}"></app-header>
+    <app-header headerText="HITS {{hitsToday}}"></app-header>
+  </div>
+</section>
+<section class="header-container">
+  <p-button label="Dashboard" (click)="onShowDashboard()"></p-button>
+  <p-button label="Next" (click)="onResetCountdown()" [disabled]="countdown > 0"></p-button>
+  <app-countdown-circle class="countdown-circle" (countdownFinished)="onCountdownFinished()"></app-countdown-circle>
+  <img [src]="gravatarUrl" alt="" class="gravatar">
+  <div class="memberdata">
+    <div class="membername">{{membername}}</div>
+    <div class="siteurl">{{siteurl}}</div>
+  </div>
+</section>
+<section class="site-frame">
+      <div class="iframe-wrapper">
+        <iframe [src]="siteurl | safeUrl" frameborder="0" width="100%"></iframe>
+        
+      </div>
+</section>

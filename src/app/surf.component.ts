@@ -62,12 +62,12 @@ export class SurfComponent {
   }
 
   onShowDashboard() {
-    console.log('Dashboard clicked');
+    //console.log('Dashboard clicked');
     this.siteurl = 'https://gitvault.io';
   }
 
   onResetCountdown() {
-    console.log('Reset clicked');
+    //console.log('Reset clicked');
     this.countdown = 10;
     this.getNextSite();
     this.countdownCircle.resetCountdown();
@@ -102,6 +102,8 @@ export class SurfComponent {
           this.siteurl = this.sites[0].url;
           this.gravatarUrl = `https://www.gravatar.com/avatar/${CryptoJS.MD5(this.sites[0].email).toString()}`;
           this.membername = this.sites[0].name;
+          this.bannerLinkUrl = this.sites[0].burl;
+          this.bannerImageUrl = this.sites[0].bimg;
         }
       },
       error => {

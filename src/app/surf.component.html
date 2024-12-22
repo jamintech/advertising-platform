@@ -1,21 +1,27 @@
 <section>
   <div class="header-container">
-    <app-header headerText="BONUS IN {{bonusin}}"></app-header>
-    <app-header headerText="WEBSITES {{sitesVisited}}"></app-header>
-    <app-header headerText="POINTS {{pointsToday}}"></app-header>
-    <app-header headerText="HITS {{hitsToday}}"></app-header>
+    <app-header headerText="BONUS IN " headerNumber="{{bonusin}}"></app-header>
+    <app-header headerText="WEBSITES " headerNumber="{{sitesVisited}}"></app-header>
+    <app-header headerText="POINTS " headerNumber="{{pointsToday}}"></app-header>
+    <app-header headerText="HITS " headerNumber="{{hitsToday}}"></app-header>
   </div>
 </section>
-<section class="header-container">
-  <p-button label="Dashboard" (click)="onShowDashboard()"></p-button>
-  <p-button label="Next" (click)="onResetCountdown()" [disabled]="countdown > 0"></p-button>
-  <app-countdown-circle class="countdown-circle" (countdownFinished)="onCountdownFinished()"></app-countdown-circle>
-  <img [src]="gravatarUrl" alt="" class="gravatar">
-  <div class="memberdata">
-    <div class="membername">{{membername}}</div>
-    <div class="siteurl">{{siteurl}}</div>
+<section class="header-container flex-container">
+  <div class="button-group">
+    <p-button label="Dashboard" [raised]="true" (click)="onShowDashboard()"></p-button>
+    <p-button label="Next" [raised]="true" (click)="onResetCountdown()" [disabled]="countdown > 0"></p-button>
+    <app-countdown-circle class="countdown-circle" (countdownFinished)="onCountdownFinished()"></app-countdown-circle>
+    <img [src]="gravatarUrl" alt="" class="gravatar">
+    <div class="memberdata">
+      <div class="membername">{{membername}}</div>
+      <div class="siteurl">{{siteurl}}</div>
+    </div>
+  </div>
+  <div class="member-banner">
+    <a [href]="bannerLinkUrl" target="_blank"></a><img [src]="bannerImageUrl" alt="" class="banner">
   </div>
 </section>
+
 <section class="site-frame">
       <div class="iframe-wrapper">
         <iframe [src]="siteurl | safeUrl" frameborder="0" width="100%"></iframe>

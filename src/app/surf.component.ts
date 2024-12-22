@@ -50,6 +50,8 @@ export class SurfComponent {
     'https://www.prosperitymarketingsystem.com/go/?s=131393&c=1&c1=1',
     'https://artiseverywhere.site/'
   ];
+  bannerLinkUrl = 'https://www.prosperitymarketingsystem.com/go/?s=131393&c=1&c1=1';
+  bannerImageUrl = 'https://tesearch.com/getimg.php?id=15';
 
   @ViewChild(CountdownCircleComponent) countdownCircle!: CountdownCircleComponent;
 

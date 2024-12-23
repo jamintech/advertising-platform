@@ -1,6 +1,26 @@
 <div class="page-container">
   <!-- Title Section -->
-  <header><h1>Advertising Platform</h1></header>
+  <header class="header">
+    <h1>Advertising Platform</h1>
+    <div class="header-buttons">
+      <button
+        pButton
+        type="button"
+        label="Login"
+        icon="pi pi-sign-in"
+        class="p-button-rounded p-button-secondary"
+        (click)="onLogin()"
+      ></button>
+      <button
+        pButton
+        type="button"
+        label="Signup"
+        icon="pi pi-user-plus"
+        class="p-button-rounded p-button-success"
+        (click)="onSignup()"
+      ></button>
+    </div>
+  </header>
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">

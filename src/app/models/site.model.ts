@@ -1,3 +1,5 @@
+import { DecimalPipe } from "@angular/common";
+
 export class Site {
     siteId: string;
     memId: string;
@@ -8,6 +10,12 @@ export class Site {
     url: string;
     credits: string;
     token: string;
+    bid: string;
+    bstate: string;
+    burl: string;
+    bimg: string;
+    bimps: number;
+
   
     constructor(data: any) {
       this.siteId = data.siteId;
@@ -19,5 +27,11 @@ export class Site {
       this.url = data.url;
       this.credits = data.credits;
       this.token = data.token;
+      this.bid = data.bid;
+      this.burl = data.burl;
+      this.bimg = data.bimg;
+      this.bstate = data.bstate;
+      this.bimps = data.bimps;
+
     }
-  }
+}

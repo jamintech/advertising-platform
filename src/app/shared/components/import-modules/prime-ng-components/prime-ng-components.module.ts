@@ -12,10 +12,8 @@ import { DialogModule } from 'primeng/dialog';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { TreeModule } from 'primeng/tree';
 import { CalendarModule } from 'primeng/calendar';
-
-
-
-
+import { MessageModule } from 'primeng/message';
+import { PasswordModule } from 'primeng/password';
 
 
 @NgModule({
@@ -35,6 +33,8 @@ import { CalendarModule } from 'primeng/calendar';
     InputTextModule,
     TreeModule,
     CalendarModule,
+    MessageModule,
+    PasswordModule
   ],
   exports: [
     ButtonModule,
@@ -49,7 +49,9 @@ import { CalendarModule } from 'primeng/calendar';
     ConfirmDialogModule,
     InputTextModule,
     TreeModule,
-    CalendarModule
+    CalendarModule,
+    MessageModule,
+    PasswordModule
   ]
 })
 export class PrimeNgComponentsModule { }

@@ -1,40 +1,40 @@
-<div class="login-container">
-  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-    <div class="p-field">
-      <label for="username">Username</label>
-      <input
-        id="username"
-        type="text"
-        pInputText
-        name="username"
-        [(ngModel)]="username"
-        required
-        minlength="5"
-        placeholder="Enter your username"
-      />
-      <p-message
-        *ngIf="loginForm.submitted && loginForm.controls['username']?.errors"
-        severity="error"
-        text="Username must be at least 5 characters."
-      ></p-message>
-    </div>
-    <div class="p-field">
-      <label for="password">Password</label>
-      <p-password
-        id="password"
-        name="password"
-        [(ngModel)]="password"
-        required
-        placeholder="Enter your password"
-      ></p-password>
-    </div>
-    <div class="p-field">
-      <button
-        type="submit"
-        pButton
-        label="Login"
-        [disabled]="loginForm.invalid"
-      ></button>
-    </div>
-  </form>
+<div class="page-container">
+  <p-card header="Login" subheader="Login to access your account." [style]="{ width: '360px' }">
+    <ng-template pTemplate="header">
+      <img alt="Card" src="/assets/landingbg.png" class="img-header" />
+    </ng-template>
+    <form>
+
+      <div class="p-field">
+        <label for="username">Username</label>
+        <input id="username" type="text" pInputText name="username" [(ngModel)]="username" required minlength="5"
+          placeholder="Enter your username" class="p-inputtext p-component" />
+      </div>
+
+      <div class="p-field">
+        <label for="password">Password</label>
+        <p-password 
+          id="password" 
+          name="password" 
+          type="password" 
+          [(ngModel)]="password" required
+          placeholder="Enter your password" 
+          feedback="false" 
+          inputStyleClass="p-inputtext p-component"></p-password>
+      </div>
+
+      <div class="p-field">
+        <a (click)="onForgotPassword()">Forgot Password?</a>
+      </div>
+      <div class="p-field">
+        <button type="submit" (click)="onCancel()" pButton label="Cancel" icon="pi pi-sign-out" severity="danger" class="p-button p-component"></button>
+        <button type="submit" (click)="onLogin()" pButton label="Login" icon="pi pi-sign-in" class="p-button p-component"></button>
+      </div>
+    </form>
+    <footer>
+      <p>Don't have an account? <a (click)="onSignup()">Sign Up</a></p>
+    </footer>
+
+  </p-card>
 </div>
+

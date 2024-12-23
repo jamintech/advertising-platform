@@ -24,4 +24,24 @@ export class LandingComponent {
   onSignup() {
     this.router.navigate(['/signup']);
   }
+
+  onClickFaq() {
+    this.router.navigate(['/faq']);
+  }
+
+  onClickTermsOfService() {
+    this.router.navigate(['/terms-of-service']);
+  }
+
+  onClickPrivacyNotice() {
+    this.router.navigate(['/privacy-notice']);
+  }
+
+  onClickCookiePolicy() {
+    this.router.navigate(['/cookie-policy']);
+  }
+
+  onClickAbout() {
+    this.router.navigate(['/about']);
+  }
 }

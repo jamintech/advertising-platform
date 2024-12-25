@@ -9,7 +9,7 @@ import * as CryptoJS from 'crypto-js'; // Import crypto-js
   providedIn: 'root'
 })
 export class SiteService {
-  private apiUrl = 'https://tesearch.com/api/getNextSite.php';
+  private apiUrl = 'https://tesearch.com/api/nextsite/index.php';
 
   constructor(private http: HttpClient) { }
 

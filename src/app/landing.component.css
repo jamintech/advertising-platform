@@ -19,6 +19,18 @@
   color: whitesmoke;
 }
 
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+
 .header-buttons {
   display: flex;
   gap: 10px;

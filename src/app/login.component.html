@@ -1,8 +1,12 @@
 <div class="page-container">
-  <p-card header="Login" subheader="Login to access your account." [style]="{ width: '360px' }">
-    <ng-template pTemplate="header">
+  <p-card 
+    header="Log in" 
+    subheader="Please enter your details" 
+    [style]="{ width: '360px' }">
+    <ng-template pTemplate="header" class="p-card-title">
       <img alt="Card" src="/assets/landingbg.png" class="img-header" />
     </ng-template>
+
     <form>
 
       <div class="p-field">
@@ -30,6 +34,7 @@
         <button type="submit" (click)="onCancel()" pButton label="Cancel" icon="pi pi-sign-out" severity="danger" class="p-button p-component"></button>
         <button type="submit" (click)="onLogin()" pButton label="Login" icon="pi pi-sign-in" class="p-button p-component"></button>
       </div>
+      {{ loginStatus  }}
     </form>
     <footer>
       <p>Don't have an account? <a (click)="onSignup()">Sign Up</a></p>
